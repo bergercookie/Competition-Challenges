@@ -1,0 +1,18 @@
+function n = mand_elem(c, lim)
+z = zeros(1, lim);
+
+z(1) = c; 
+i = 1;
+
+while abs(z(i) ^ 2 + c) <= 2 && i < lim
+        i = i+1;
+        z(i) = z(i-1)^2 + c;
+    else
+        break
+    end
+end
+if i ~= lim % out due to the magnitude!
+    z = z(1:i-1); 
+end
+n = length(z);
+end

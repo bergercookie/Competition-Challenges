@@ -1,0 +1,3 @@
+function B = column_removal(A,n)
+  B = A(1:n)
+end

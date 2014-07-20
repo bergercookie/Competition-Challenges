@@ -1,0 +1,18 @@
+function N = mandelbrot(C,lim)
+my_N = zeros(size(C));
+
+for i = 1:length(C)
+    for j =1:length(C(:, 1))
+        my_N(i,j) = mand_elem(C(i,j), lim);
+    end
+end
+N = my_N
+end
+
+function z = mand_elem(c, lim)
+z = zeros(1, lim);
+
+z(1) = c
+for i = 1:lim
+
+end
